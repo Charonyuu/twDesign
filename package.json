@@ -3,6 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "description": "A UI library for tailwind css developer convenience to use",
+  "repository": "https://github.com/Charonyuu/twDesign.git",
+  "author": "charonyu",
+  "private": true,
+  "scripts": {
+    "build": "yarn lerna run build",
+    "dev": "yarn lerna run dev"
+  },
+  "workspaces":{
+    "packages": [
+      "packages/*",
+      "playgrounds/*"
+    ]
+  } ,
   "devDependencies": {
     "lerna": "^7.1.1"
   }
