@@ -1,0 +1,9 @@
+{
+  "name": "twdesign",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^7.1.1"
+  }
+}
