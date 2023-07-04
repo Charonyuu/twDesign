@@ -5,4 +5,4 @@ const Button = ({ label }) => {
 };
 
 export { Button as default };
-//# sourceMappingURL=Button.js.map
+//# sourceMappingURL=button.js.map

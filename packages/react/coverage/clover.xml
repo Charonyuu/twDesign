@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1688491176042" clover="3.2.0">
+  <project timestamp="1688491176042" name="All files">
+    <metrics statements="11" coveredstatements="11" conditionals="13" coveredconditionals="8" methods="7" coveredmethods="7" elements="31" coveredelements="26" complexity="0" loc="11" ncloc="11" packages="2" files="3" classes="3"/>
+    <package name="button">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="button.tsx" path="/Users/charonyu/Documents/我的side_project/Project--ReactTailwindUI庫/twdesign/packages/react/src/atoms/button/button.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/charonyu/Documents/我的side_project/Project--ReactTailwindUI庫/twdesign/packages/react/src/atoms/button/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="numberInput">
+      <metrics statements="9" coveredstatements="9" conditionals="13" coveredconditionals="8" methods="6" coveredmethods="6"/>
+      <file name="NumberInput.tsx" path="/Users/charonyu/Documents/我的side_project/Project--ReactTailwindUI庫/twdesign/packages/react/src/atoms/numberInput/NumberInput.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="13" coveredconditionals="8" methods="6" coveredmethods="6"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="64" count="1" type="cond" truecount="4" falsecount="1"/>
+        <line num="65" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
