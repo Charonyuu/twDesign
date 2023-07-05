@@ -1,2 +1,5 @@
+import "./index.css";
 import Button from "./atoms/button";
-export { Button };
+import NumberInput from "./atoms/numberInput";
+import Switch from "./atoms/switch";
+export { Button, NumberInput, Switch };

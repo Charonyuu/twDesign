@@ -5,7 +5,7 @@ interface ButtonProps{
 }
 
 const Button : React.FC<ButtonProps> = ({label}) =>{
-    return <button>{label}</button>
+    return <button >123213{label}</button>
 }
 
 export default Button
