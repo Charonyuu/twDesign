@@ -1,15 +1,24 @@
 import React, { Dispatch, SetStateAction } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface NumberInputProps {
+  min?: number;
   number: number;
   setNumber: Dispatch<SetStateAction<number>>;
   max: number;
+  limitHint?: boolean;
+  mode?: string;
+  className?: string
 }
 
 const NumberInput: React.FC<NumberInputProps> = ({
   number,
   setNumber,
   max,
+  min = 1,
+  limitHint = true,
+  mode = "dark",
+  className,
 }) => {
   //增加
   function handleIncrement() {
@@ -20,47 +29,25 @@ const NumberInput: React.FC<NumberInputProps> = ({
   function handleDecrement() {
     setNumber((prev: number) => prev - 1);
   }
+  const textStyle = mode === 'light' ? "text-black" : "text-white"
+  const enableStyle = "cursor-pointer";
+  const disableStyle = "cursor-not-allowed text-gray-400";
 
-  const enableStyle = { cursor: "pointer", color: "#fff" };
-  const disableStyle = {
-    cursor: "not-allowed",
-    color: "#767676",
-    fontSize: "20px",
-  };
 
   return (
-    <div style={{ textAlign: "center", width: "150px" }}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          border: "1px solid #767676",
-          borderRadius: "10px",
-          height: "30px",
-          padding: "0 10px",
-        }}
-      >
+    <div className="text-center w-150">
+      <div className={twMerge("flex justify-between items-center border border-solid border-gray-[#767676] rounded-xl h-30 px-10 text-lg", textStyle, className)}>
         <p
-          onClick={number > 1 ? handleDecrement : undefined}
-          style={number > 1 ? enableStyle : disableStyle}
+          onClick={number > min ? handleDecrement : undefined}
+          className={number > min ? enableStyle : disableStyle}
         >
           -
         </p>
         <input
-          style={{
-            fontSize: "14px",
-            fontWeight: "500",
-            background: "transparent",
-            border: 0,
-            width: "40px",
-            textAlign: "center",
-            color: "#fff",
-          }}
+          className="text-center bg-transparent border-0 w-40 font-medium"
           value={number}
           onChange={(event) => {
             const inputNumber = parseInt(event.target.value);
-
             if (!isNaN(inputNumber) && inputNumber <= max && inputNumber > 0) {
               setNumber(inputNumber);
             }
@@ -68,12 +55,12 @@ const NumberInput: React.FC<NumberInputProps> = ({
         />
         <p
           onClick={number < max ? handleIncrement : undefined}
-          style={number < max ? enableStyle : disableStyle}
+          className={number < max ? enableStyle : disableStyle}
         >
           +
         </p>
       </div>
-      <p style={{ margin: "5px auto" }}>數量限制: {max}</p>
+      {limitHint && <p className="mt-2 mx-auto">數量限制: {max}</p>}
     </div>
   );
 };

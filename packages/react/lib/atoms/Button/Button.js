@@ -1,8 +1,9 @@
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
-const Button = ({ label }) => {
-    return React.createElement("button", null,
-        "123213",
+const Button = ({ buttonClass, label }) => {
+    return React.createElement("button", { className: twMerge(`py-2 px-5 bg-blue-400 rounded-2xl`, buttonClass) },
+        "123",
         label);
 };
 
